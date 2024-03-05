@@ -1,0 +1,209 @@
+
+i {
+  font-style: normal;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.fc-h-event .fc-event-main {
+  position: relative;
+  padding-left: .3rem
+}
+
+.fc-view-harness-active .fc-scrollgrid-section-header {
+  height: auto;
+}
+
+.fc-theme-standard th,
+  .fc-theme-standard tr {
+border-color: transparent; 
+padding: .4rem 0; 
+
+}
+
+.fc .fc-scrollgrid-section thead{
+  border: none;
+}
+
+.fc .fc-scroller-harness table{
+  border: transparent;
+}
+
+.fc .fc-scroller-harness tbody {
+  border: solid 1.5px #efeeee;
+}
+.fc-theme-standard td {
+  border: solid 1.5px #efeeee;
+}
+
+.fc .fc-scrollgrid {
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+.fc .fc-scrollgrid-section > * {
+  border-left-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+}
+
+/* 次へ、前へのボタン背景変更 */
+.fc .fc-button-primary.fc-prev-button,
+.fc .fc-button-primary.fc-next-button {
+  background-color: transparent;
+  border: none;
+  color: transparent;
+}
+
+.fc-toolbar-chunk {
+  position: relative;
+}
+.fc .fc-button-primary.fc-prev-button::after {
+  content: "\f0d8";
+  display: inline-block;
+  font: var(--fa-font-solid);
+  color: rgb(17, 32, 60);
+  font-size: 1.7rem;
+  position: absolute;
+  top: 50%;
+  left: -20%;
+  z-index: 2;
+  transform: translateY(-50%) rotate(-90deg);
+}
+
+.fc .fc-button-primary.fc-next-button::before {
+    content: "\f0d8";
+  display: inline-block;
+  font: var(--fa-font-solid);
+  color: rgb(17, 32, 60);
+  font-size: 1.7rem;
+  position: absolute;
+  top: 50%;
+  right: -29%;
+  z-index: 2;
+  transform: translateY(-50%) rotate(90deg);
+
+}
+
+.fc .fc-button-primary:hover,
+.fc-button-primary:not(:disabled):active
+{
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.fc .fc-button-primary:focus ,
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus, 
+.fc .fc-button-primary:not(:disabled):active:focus {
+  box-shadow: none;
+
+}
+
+
+
+/* 土日の背景色変更 */
+
+.fc-day-sat .fc-daygrid-day-frame,
+.fc-day-sun .fc-daygrid-day-frame {
+background-color: #ffefefcb;
+color: rgb(255, 118, 118);
+}
+
+/* イベントのレイアウト変更 */
+.fc-h-event {
+  height: 1.6rem;
+  border: none;
+  padding-left: .2rem;
+}
+
+.fc-event {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.fc-daygrid-day-events {
+  margin: .2rem .2rem;
+}
+.fc-daygrid-event {
+  border-radius: 7px;
+}
+.fc-daygrid-event-harness {
+  margin: .2rem 0;
+}
+
+/* 今日の表示を変更 */
+.fc .fc-button-primary:disabled {
+  background-color: #353841;
+  color: #FFF;
+  border: none;
+  padding: .4rem 1.2rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+
+/* 日付などの色変更 */
+a:not([href]):not([tabindex]) {
+  color: #7a7b81;
+}
+
+.fc .fc-daygrid-day-number {
+  padding: .5rem .7rem;
+  font-weight: 700;
+}
+
+.fc .fc-daygrid-day-top {
+  flex-direction: row;
+}
+
+/* 過去の日付の背景色を変更 */
+
+.fc-day-other .fc-daygrid-day-frame  {
+  background-color: #fbf8f8;
+}
+
+/* イベントの背景色を変更 */
+
+.fc-v-event,
+.fc-h-event {
+background-color: rgba(160, 234, 249, 0.7);
+border: none;
+color: #353841;
+padding: .3rem .6rem;
+border-radius: .4rem;
+margin: .2rem;
+}
+.fc-timegrid-event-harness-inset .fc-timegrid-event, .fc-timegrid-event.fc-event-mirror, .fc-timegrid-more-link {
+  box-shadow: none;
+}
+
+.fc-v-event .fc-event-main,
+.fc-h-event .fc-event-main {
+  color: rgb(100, 100, 100);
+}
+
+
+/* 今日の背景色変更 */
+
+.fc .fc-daygrid-day.fc-day-today,
+.fc .fc-timegrid-col.fc-day-today  {
+  background-color: rgba(192, 234, 242, 0.271);
+}
+
+
+/* 週表示の終日左上の日にち表示を削除 */
+.fc-timeGridWeek-view .fc-daygrid-day-frame .fc-daygrid-day-number {
+  display: none;
+}
+
+/* 週表示　終日部分のレイアウト調整 */
+.fc .fc-daygrid-day-frame {
+  padding: .3rem 0;
+}
